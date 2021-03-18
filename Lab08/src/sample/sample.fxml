@@ -1,0 +1,66 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import sample.DataSource?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <MenuBar id="menuBar" fx:id="menuBar" GridPane.columnIndex="0" GridPane.rowIndex="0">
+        <Menu text="File">
+            <MenuItem text="New" fx:id="new" id="new"></MenuItem>
+            <MenuItem text="Open" fx:id="open" id="open"></MenuItem>
+            <MenuItem text="Save" fx:id="save" id="save"></MenuItem>
+            <MenuItem text="SaveAs" fx:id="saveAs" id="saveAs"></MenuItem>
+            <MenuItem text="Exit" fx:id="exit" id="exit"></MenuItem>
+        </Menu>
+    </MenuBar>
+    <TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="0" prefWidth="550">
+        <columns>
+            <TableColumn text="SID" fx:id="sid">
+                <cellValueFactory>
+                    <PropertyValueFactory property="studentId"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn text="Assignments" fx:id="ass">
+                <cellValueFactory>
+                    <PropertyValueFactory property="assignment"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn text="Midterm" fx:id="mid">
+                <cellValueFactory>
+                    <PropertyValueFactory property="midterm"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn text="Final Exam" fx:id="fExam">
+                <cellValueFactory>
+                    <PropertyValueFactory property="finalExam"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn text="Final Mark" fx:id="fMark">
+                <cellValueFactory>
+                    <PropertyValueFactory property="finalMark"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn text="Letter Grade" fx:id="lGrade">
+                <cellValueFactory>
+                    <PropertyValueFactory property="letterGrade"/>
+                </cellValueFactory>
+            </TableColumn>
+
+        </columns>
+
+    </TableView>
+
+</GridPane>
