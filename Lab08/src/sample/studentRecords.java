@@ -1,12 +1,12 @@
 package sample;
 
 public class studentRecords {
-    private String studentId;
-    private float midterm;
-    private float assignment;
-    private float finalExam;
-    private float finalMark;
-    private String letterGrade;
+    protected String studentId;
+    protected float midterm;
+    protected float assignment;
+    protected float finalExam;
+    protected float finalMark;
+    protected String letterGrade;
 
     //studentRecords constructor
     public studentRecords(String sid,  float ass, float midT, float finalE){
@@ -14,6 +14,9 @@ public class studentRecords {
         midterm = midT;
         assignment = ass;
         finalExam = finalE;
+
+    }
+    public studentRecords(){
 
     }
     // get functions

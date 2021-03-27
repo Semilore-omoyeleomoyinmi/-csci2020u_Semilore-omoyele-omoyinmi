@@ -8,11 +8,23 @@
 <?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.cell.PropertyValueFactory?>
 <?import javafx.scene.control.MenuBar?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-    <MenuBar> 
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<VBox fx:controller="sample.Controller"
+      xmlns:fx="http://javafx.com/fxml" alignment="center" >
+
+    <MenuBar id="menuBar" fx:id="menuBar" >
+        <Menu text="File">
+            <MenuItem text="New" onAction="#handleNewAction"></MenuItem>
+            <MenuItem text="Open" onAction="#handleOpenAction"></MenuItem>
+            <MenuItem text="Save" onAction="#handleSaveAction"></MenuItem>
+            <MenuItem text="SaveAs" onAction="#handleSaveAsAction"></MenuItem>
+            <MenuItem text="Exit" onAction="#handleExitAction"></MenuItem>
+        </Menu>
     </MenuBar>
-    <TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="0" prefWidth="550">
+    <TableView fx:id="tableView" prefWidth="550">
         <columns>
             <TableColumn text="SID" fx:id="sid">
                 <cellValueFactory>
@@ -54,4 +66,29 @@
 
     </TableView>
 
-</GridPane>
+
+    <GridPane  vgap="10" hgap="10">
+
+        <padding><Insets top="10" right="25" bottom="10" left="25"/></padding>
+        <Button text="Add" fx:id="button" GridPane.columnIndex="1" GridPane.rowIndex="2" onAction="#handlebuttonAction"></Button>
+
+        <Label text="SID" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField promptText="SID" fx:id="newSID" GridPane.columnIndex="1" GridPane.rowIndex="0" maxWidth="200" />
+
+        <Label text="Assignment" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+        <TextField promptText="Assignment" fx:id="newAss" GridPane.columnIndex="4" GridPane.rowIndex="0" maxWidth="200"/>
+
+        <Label text="Midterm" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField promptText="Midterm" fx:id="newMid" GridPane.columnIndex="1" GridPane.rowIndex="1" maxWidth="200"/>
+
+        <Label text="FinalExam" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+        <TextField promptText="FinalExam" fx:id="newFin" GridPane.columnIndex="4" GridPane.rowIndex="1" maxWidth="200"/>
+
+
+    </GridPane>
+
+
+
+
+
+</VBox>

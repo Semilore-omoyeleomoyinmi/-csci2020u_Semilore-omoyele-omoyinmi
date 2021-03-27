@@ -27,7 +27,7 @@
 
     <Label text ="Phone #:"
            GridPane.columnIndex="0" GridPane.rowIndex="4"/>
-    <TextField 
+    <TextField
             GridPane.columnIndex="1" GridPane.rowIndex="4"/>
 
     <Label text ="Date of Birth:"
